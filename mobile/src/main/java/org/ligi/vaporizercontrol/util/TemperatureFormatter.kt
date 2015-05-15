@@ -8,8 +8,8 @@ public class TemperatureFormatter {
     companion object {
         fun Float.format(digits: Int) = java.lang.String.format("%.${digits}f", this)
 
-        public fun getTempDegrees(temp: Int, temperatureForamt: Int): Int {
-            return when (temperatureForamt) {
+        public fun getTempDegrees(temp: Int, temperatureFormat: Int): Int {
+            return when (temperatureFormat) {
                 Settings.TEMPERATURE_FAHRENHEIT -> temp * 5 / 9
                 Settings.TEMPERATURE_KELVIN -> temp - 2731
                 else -> temp
